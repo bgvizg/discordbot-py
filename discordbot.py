@@ -5,8 +5,6 @@ import a2s
 from nextcord.ext import tasks
 import time
 from cmath import log
-from distutils.sysconfig import PREFIX
-import discord
 import os
 
 # 디스코드 클라이언트 객체 생성
