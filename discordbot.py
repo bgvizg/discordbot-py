@@ -90,14 +90,15 @@ def result():
     result +="\n\n"
     result +="\033[32m다음 서버 조회 시각 : " + str(nextTime) + "\033[0m"
     result +="```"
-    return (result,sumPlayerCount)
+    return [result,sumPlayerCount]
 
 # 10초마다 메시지를 수정하는 작업
 @tasks.loop(seconds=20)
 async def update_time():
     if message:
-        result,sumPlayerCount = result()
-        await message.edit(content=result)
+        temp = result()
+        serverInfo,sumPlayerCount = temp[0], temp[1]
+        await message.edit(content=serverInfo)
         await client.change_presence(activity=discord.Game(name=f"∑ 플레이어: {sumPlayerCount}명"))
 
 # 봇 실행
