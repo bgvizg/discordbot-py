@@ -99,4 +99,4 @@ async def update_time():
         await message.edit(content=result())
 
 # 봇 실행
-client.run(TOKEN = os.environ['TOKEN'])
+client.run(os.environ['TOKEN'])
