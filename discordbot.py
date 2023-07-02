@@ -99,5 +99,4 @@ async def update_time():
         await message.edit(content=result())
 
 # 봇 실행
-bot_token = "MTEyNTA0MjAzNDYyMTgxNjg5Mw.Gd6GJL.ipsNFd0e3pYvFdsRuFbxQ6eq6MqG3zMXnhr0ro"
-client.run(bot_token)
+client.run(TOKEN = os.environ['TOKEN'])
