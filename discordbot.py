@@ -5,7 +5,10 @@ import a2s
 from nextcord.ext import tasks
 import time
 from cmath import log
+from distutils.sysconfig import PREFIX
+from dotenv import load_dotenv
 import os
+load_dotenv()
 
 # 디스코드 클라이언트 객체 생성
 client = nextcord.Client()
