@@ -85,7 +85,7 @@ def result():
         except:
             result +=Red + "! 서버를 찾을 수 없음" + Suffix + " | " + address + ":" + str(port) + "\n"
     end = time.time()
-    nextTime = now + timedelta(seconds=10 + end-start)
+    nextTime = now + timedelta(seconds=20 + end-start)
     result +=f"―――――――――――――― ∑ 플레이어 {BrightRed}[{sumPlayerCount}명]{Suffix} ――――――――――――――"
     result +="\n\n"
     result +="\033[32m다음 서버 조회 시각 : " + str(nextTime) + "\033[0m"
@@ -93,7 +93,7 @@ def result():
     return result
 
 # 10초마다 메시지를 수정하는 작업
-@tasks.loop(seconds=10)
+@tasks.loop(seconds=20)
 async def update_time():
     if message:
         await message.edit(content=result())
