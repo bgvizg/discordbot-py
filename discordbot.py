@@ -40,10 +40,10 @@ async def on_ready():
 address = "121.147.111.167"
 ports = [27029,27030,27031,27032,27033,27034,27035,27036,27037,27038,27039,27040]
 Red = "\033[31m"
-BrightRed = "\033[91m"
+BrightRed = "\033[35m"
 Green = "\033[32m"
-Cyan = "\033[36m"
-Purple = "\033[95m"
+Cyan = "\033[34m"
+Purple = "\033[35m"
 Yellow = "\033[33m"
 Suffix = "\033[0m"
 
