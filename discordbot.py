@@ -43,7 +43,7 @@ Red = "\033[31m"
 BrightRed = "\033[35m"
 Green = "\033[32m"
 Cyan = "\033[34m"
-Purple = "\033[35m"
+Purple = "\033[36m"
 Yellow = "\033[33m"
 Suffix = "\033[0m"
 
@@ -99,7 +99,7 @@ async def update_time():
         temp = result()
         serverInfo,sumPlayerCount = temp[0], temp[1]
         await message.edit(content=serverInfo)
-        await client.change_presence(activity=discord.Game(name=f"∑ 플레이어: {sumPlayerCount}명"))
+        await client.change_presence(activity=nextcord.Game(name=f"∑ 플레이어: {sumPlayerCount}명"))
 
 # 봇 실행
 client.run(os.environ['TOKEN'])
